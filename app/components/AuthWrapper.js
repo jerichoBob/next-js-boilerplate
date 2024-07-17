@@ -11,7 +11,7 @@ export default function AuthWrapper({ children }) {
     if (!isAuthenticated && pathname !== '/login') {
       router.push('/login');
     } else if (isAuthenticated && pathname === '/') {
-      router.push('/home');
+      router.push('/dashboard');
     }
   }, [router, pathname]);
 

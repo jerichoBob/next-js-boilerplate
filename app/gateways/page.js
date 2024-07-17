@@ -4,7 +4,7 @@ import AuthWrapper from '../components/AuthWrapper';
 import Menubar from '../components/Menubar';
 import { FaCube, FaNetworkWired, FaChartLine, FaExclamationTriangle } from 'react-icons/fa';
 
-function HomePage() {
+function Gateways() {
   const router = useRouter();
 
   const handleLogout = () => {
@@ -16,7 +16,7 @@ function HomePage() {
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Menubar />
       <main className="flex-grow p-6">
-        <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
+        <h1 className="text-3xl font-bold mb-6">Gateways</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <SummaryCard title="Total Assets" value="156" icon={<FaCube />} color="bg-blue-500" />
           <SummaryCard title="Active Gateways" value="23" icon={<FaNetworkWired />} color="bg-green-500" />
@@ -102,7 +102,7 @@ function RecentAlerts() {
 export default function WrappedHomePage() {
   return (
     <AuthWrapper>
-      <HomePage />
+      <Gateways />
     </AuthWrapper>
   );
 }

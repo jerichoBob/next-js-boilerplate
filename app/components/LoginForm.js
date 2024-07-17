@@ -12,7 +12,7 @@ export default function LoginForm() {
     e.preventDefault();
     if (username === 'bobse' && password === 'its-a-secret') {
       localStorage.setItem('isAuthenticated', 'true');
-      router.push('/home');
+      router.push('/dashboard');
     } else {
       setError('Invalid credentials');
     }
