@@ -11,7 +11,7 @@ function DetailsPage() {
       <Menubar />
       <div className="flex-grow p-4">
         <div className="mb-4">
-          <a onClick={() => router.push('/home')} className="text-blue-500 cursor-pointer">&lt; BACK TO ASSETS</a>
+          <a onClick={() => router.push('/dashboard')} className="text-blue-500 cursor-pointer">&lt; BACK TO ASSETS</a>
           <h2 className="text-2xl font-bold">Home Toaster</h2>
           <button className="text-blue-500">+ VIEW ASSET INFORMATION</button>
         </div>

@@ -11,7 +11,6 @@ export default function Menubar() {
 
   const isActive = (path) => pathname === path;
 
-
   const handleLogout = () => {
     localStorage.removeItem('user'); // Remove the user item from local storage
     router.push('/login'); // Redirect to login page after logout
