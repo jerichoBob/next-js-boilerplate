@@ -12,7 +12,7 @@ function Assets() {
       <Menubar />
       <main className="flex-grow p-6">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">T1 Sensors</h1>
+          <h1 className="text-3xl font-bold">Assets</h1>
           <div className="flex space-x-2">
             <button className="bg-blue-500 text-white px-4 py-2 rounded">
               <FaMapMarkedAlt className="inline mr-2" /> Map
