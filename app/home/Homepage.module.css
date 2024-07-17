@@ -1,0 +1,45 @@
+.menuBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 0.5rem 1rem;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navigation {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navItem {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  color: white;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  padding: 4px;
+  width: 48px;
+  height: 48px;
+}

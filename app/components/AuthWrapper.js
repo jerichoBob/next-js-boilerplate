@@ -1,16 +1,19 @@
 'use client';
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function AuthWrapper({ children }) {
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const isAuthenticated = localStorage.getItem('isAuthenticated');
-    if (!isAuthenticated) {
-      router.push('/');
+    if (!isAuthenticated && pathname !== '/login') {
+      router.push('/login');
+    } else if (isAuthenticated && pathname === '/') {
+      router.push('/home');
     }
-  }, [router]);
+  }, [router, pathname]);
 
   return <>{children}</>;
 }

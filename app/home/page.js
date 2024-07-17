@@ -1,20 +1,39 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import AuthWrapper from '../components/AuthWrapper';
+import styles from './HomePage.module.css';
+import Menubar from '../components/Menubar';
 
 function HomePage() {
   const router = useRouter();
 
+  const handleLogout = () => {
+    localStorage.removeItem('isAuthenticated');
+    router.push('/login');
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="text-2xl font-bold mb-4">Home Page</h1>
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={() => router.push('/details')}
-      >
-        Details
-      </button>
-    </main>
+    <div className={styles.pageContainer}>
+      <Menubar />
+
+      <main className={styles.mainContent}>
+        <h1 className={styles.title}>Home Page</h1>
+        <div className={styles.buttonContainer}>
+          <button
+            className={styles.button}
+            onClick={() => router.push('/details')}
+          >
+            Details
+          </button>
+          <button
+            className={`${styles.button} ${styles.logoutButton}`}
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        </div>
+      </main>
+    </div>
   );
 }
 
